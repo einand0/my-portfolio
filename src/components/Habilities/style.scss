@@ -1,0 +1,146 @@
+@import '../../assets/variables/variables';
+
+
+#habilities-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: $secondary-color;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(10%2c 11%2c 12%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c628.7C116.385%2c619.254%2c156.737%2c458.995%2c260.245%2c404.95C380.286%2c342.272%2c555.021%2c396.868%2c642.303%2c293.33C728.709%2c190.831%2c715.745%2c31.96%2c684.588%2c-98.429C654.803%2c-223.073%2c574.838%2c-331.613%2c474.053%2c-410.769C383.267%2c-482.072%2c266.419%2c-503.372%2c151.775%2c-516.899C51.888%2c-528.685%2c-41.996%2c-494.617%2c-141.954%2c-483.451C-267.517%2c-469.425%2c-414.267%2c-524.032%2c-511.082%2c-442.855C-607.315%2c-362.167%2c-605.932%2c-213.552%2c-613.362%2c-88.188C-620.323%2c29.27%2c-613.07%2c151.474%2c-552.278%2c252.217C-494.43%2c348.08%2c-381.401%2c386.452%2c-288.887%2c449.518C-193.322%2c514.664%2c-115.278%2c638.056%2c0%2c628.7' fill='%2308090a'%3e%3c/path%3e%3cpath d='M1440 867.549C1496.955 855.94 1550.55 839.369 1601.106 810.686 1654.266 780.5260000000001 1715.1019999999999 752.827 1740.3319999999999 697.157 1765.545 641.525 1742.3890000000001 578.23 1733.868 517.748 1725.321 457.08299999999997 1722.004 395.5 1690.435 342.996 1655.042 284.131 1607.345 231.52300000000002 1544.758 203.22699999999998 1477.21 172.688 1400.273 161.902 1328.194 179.224 1254.262 196.99099999999999 1191.434 244.029 1140.407 300.401 1088.596 357.639 1035.567 424.723 1036.089 501.926 1036.598 577.202 1109.124 628.414 1143.079 695.5989999999999 1175.2559999999999 759.266 1168.595 850.508 1230.327 886.258 1292.304 922.149 1369.824 881.852 1440 867.549' fill='%230c0d0e'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    padding-bottom: 40px;
+
+    h2 {
+        color: $title-color;
+        font-size: 1.5rem;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 2px;
+        position: relative;
+    }
+
+
+    // HABILITIES GRID
+
+    #habilities-wrapper {
+
+        width: 80%;
+        display: grid;
+        justify-items: center;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        .hability-wrapper {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .hability {
+                background-color: $secondary-color;
+                height: 100%;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                padding: 20px 10px;
+                border-radius: 15px;
+                -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px -1px 25px 4px rgba(33, 33, 33, 0);
+                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px -1px 25px 4px rgba(33, 33, 33, 0);
+                transition: 1s;
+
+                h3 {
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    font-family: 'Anton', sans-serif;
+                }
+
+                img {
+                    width: 30%;
+                }
+
+
+                .progress-bar {
+                    height: 20px;
+                    width: 80%;
+                    padding: 5px;
+                    background-color: $tertiary-color;
+                    display: flex;
+                    --progress: 1;
+                }
+
+                .html::before {
+                    content: "";
+                    width: calc(var(--progress) * 90%);
+                    background-color: red;
+                }
+
+                .css::before {
+                    content: "";
+                    width: calc(var(--progress) * 80%);
+                    background-color: blue;
+                }
+
+                .js::before {
+                    content: "";
+                    width: calc(var(--progress) * 70%);
+                    background-color: yellow;
+                }
+
+                .reactjs::before {
+                    content: "";
+                    width: calc(var(--progress) * 70%);
+                    background-color: rgb(0, 255, 255);
+                }
+
+                .tailwind::before {
+                    content: "";
+                    width: calc(var(--progress) * 60%);
+                    background-color: cornflowerblue;
+                }
+
+                .git::before {
+                    content: "";
+                    width: calc(var(--progress) * 50%);
+                    background-color: orangered;
+                }
+
+                .nodejs::before {
+                    content: "";
+                    width: calc(var(--progress) * 20%);
+                    background-color: greenyellow;
+                }
+
+                .ts::before {
+                    content: "";
+                    width: calc(var(--progress) * 20%);
+                    background-color: cornflowerblue;
+                }
+
+            }
+
+            .hability:hover {
+                background-color: rgb(61, 60, 60);
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+
+        }
+    }
+}
+
+
+@media screen and (min-width: 850px){
+    #habilities-section{
+        h2{
+            font-size: 2rem;
+        }
+    }
+}

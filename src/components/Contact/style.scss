@@ -1,0 +1,58 @@
+@import '../../assets/variables/variables';
+
+#contact{
+    background-color: $secondary-color;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px 0 20px 0;
+
+    h2{
+        color: $title-color;
+        font-size: 1.5rem;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 2px;
+        position: relative;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+
+        li{
+            a{
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                span{
+                    font-size: 1.25rem;
+                }
+            }
+
+            a:hover{
+                color: $title-color;
+            }
+        }
+    }
+}
+
+
+// RESPONSIVIDADE
+
+
+@media screen and (min-width: 850px){
+    #contact{
+        h2{
+            font-size: 2rem;
+        }
+    }
+}
